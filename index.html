@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Currency Converter - Real-Time Exchange Rates</title>
+    <meta name="description" content="A fast, modern, and user-friendly currency converter with real-time exchange rates. Convert between major world currencies instantly.">
+    <meta name="keywords" content="currency converter, exchange rate, money converter, finance, currency exchange">
+
+    <link rel="icon" type="image/png" href="path/to/your/logo.png">
+    <link rel="apple-touch-icon" href="path/to/your/logo.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-website-url.com/">
+    <meta property="og:title" content="Currency Converter - Real-Time Exchange Rates">
+    <meta property="og:description" content="A fast and modern currency converter with real-time rates.">
+    <meta property="og:image" content="https://your-website-url.com/path/to/social-preview-image.png">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://your-website-url.com/">
+    <meta property="twitter:title" content="Currency Converter - Real-Time Exchange Rates">
+    <meta property="twitter:description" content="A fast and modern currency converter with real-time rates.">
+    <meta property="twitter:image" content="https://your-website-url.com/path/to/social-preview-image.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <ul class="background-shapes">
+        <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
+    </ul>
+
+    <main class="converter-wrapper">
+        <div class="converter-container">
+            <header class="converter-header">
+                <h1>Currency Converter</h1>
+                <p>Real-time exchange rates</p>
+            </header>
+
+            <form id="converter-form">
+                <div class="input-group">
+                    <label for="amount">Amount</label>
+                    <input type="number" id="amount" value="1" min="0" step="any" required>
+                </div>
+                <div class="input-group">
+                    <label for="from-currency">From</label>
+                    <div class="select-container">
+                        <img id="from-flag" src="https://flagcdn.com/48x36/us.png" alt="from flag">
+                        <select id="from-currency"></select>
+                    </div>
+                </div>
+                <div class="swap-container">
+                    <button type="button" id="swap-button" title="Swap Currencies">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5m-7-14a.5.5 0 0 1 .5.5v11.793l-3.146-3.147a.5.5 0 0 1-.708.708l-4 4a.5.5 0 0 1 0-.708l4-4a.5.5 0 0 1 .708 0L4 13.293V1.5a.5.5 0 0 1 .5-.5"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="input-group">
+                    <label for="to-currency">To</label>
+                    <div class="select-container">
+                        <img id="to-flag" src="https://flagcdn.com/48x36/in.png" alt="to flag">
+                        <select id="to-currency"></select>
+                    </div>
+                </div>
+            </form>
+
+            <div id="result-container" class="result-container">
+                <p id="result-text">1 USD = 83.50 INR</p>
+                <p id="last-updated">Last updated: ...</p>
+            </div>
+
+            <div id="message-box" class="message-box"></div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 Currency Glass. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
